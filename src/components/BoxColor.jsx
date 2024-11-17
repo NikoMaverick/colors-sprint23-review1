@@ -11,7 +11,7 @@ function BoxColor ({color, value}) {
   }
 
   useEffect(() => {
-    setClassBox(boxRef.current.classBox)
+    setClassBox(boxRef.current.className) 
   },[])
 
   return (
@@ -21,7 +21,7 @@ function BoxColor ({color, value}) {
     className={`box ${color}`}
     style={boxClass}
     >
-    <h1>{color === value ? `Soy color ${color}` : `No soy color ${value}`} </h1>
+    {color === value ? <h1 style={{color: 'black'}}> Yes, I'm {value} color</h1> : <h1>I'm not {value} color</h1> }
       
     </div>
     </> 
